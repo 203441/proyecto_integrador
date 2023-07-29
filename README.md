@@ -14,3 +14,8 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+Versión 0.1.1 usada para la feria de emprendimiento del día viernes 21 de julio de 2023
+
+Integrantes: Josué Benjamín Maldonado Urbina
+             Andy Omar Franco Bermúdez
