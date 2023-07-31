@@ -213,7 +213,7 @@ class RegisterScreen extends StatelessWidget {
                           // no tiene cuenta? Registrate
                           TextButton(
                             onPressed: () {
-                              Navigator.of(context).pushNamed('/');
+                              Navigator.of(context).pushNamed('/login_screen');
                             },
                             child: const Text(
                                 '¿Ya tienes cuenta? Inicia sesión aquí',

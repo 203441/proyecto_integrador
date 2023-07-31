@@ -1,3 +1,5 @@
+import 'package:app_auth/features/information/presentation/pages/infoCauses.dart';
+import 'package:app_auth/features/information/presentation/pages/info_contact.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -53,9 +55,30 @@ class ContactListPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // app bar color 514EEB
-        backgroundColor: Color(0xFF514EEB),
-        title: Text('Contactos de profesionales'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: IconButton(
+          color: Colors.black,
+          icon: const Icon(
+            Icons.keyboard_arrow_left_sharp,
+            size: 40,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+       actions: [
+        IconButton(
+          color: Colors.black,
+          icon: Icon(Icons.info),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => InfoContact()),
+            );
+          },
+        ),
+       ],
       ),
       body: ListView.builder(
         itemCount: _contacts.length,

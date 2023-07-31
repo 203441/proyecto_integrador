@@ -35,7 +35,7 @@ class RecomendacionesTDAH extends StatelessWidget {
             child: Column(
               children: [
                  const Text(
-                  'Recomendaciones  para el manejo del TDAH',
+                  'Recomendaciones para el manejo del TDAH',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 16,
@@ -85,7 +85,6 @@ class RecomendacionesTDAH extends StatelessWidget {
                             letterSpacing: -0.41,
                           ),
                         ),
-                        
                         const SizedBox(height: 15),
                         Container(
                           width: 300,
@@ -94,16 +93,22 @@ class RecomendacionesTDAH extends StatelessWidget {
                             shape: BoxShape.rectangle,
                             border: Border.all(width: 0.50, color: Color(0xFFC7C7C7)),
                           ),
+                          child: YoutubePlayer(
+                            controller: YoutubePlayerController(
+                              initialVideoId: 'qg3bkPb5OnU', // Reemplaza 'VIDEO_ID_HERE' con el ID de tu video de YouTube
+                              flags: YoutubePlayerFlags(
+                                autoPlay: false, // Cambia a 'true' si deseas que el video se reproduzca automáticamente
+                                mute: false, // Cambia a 'true' si deseas que el video se reproduzca sin sonido
+                              ),
+                            ),
+                            showVideoProgressIndicator: true,
+                          ),
                         ),
                         const SizedBox(height: 15),
                       ],
                     ),
                   ),
                 ),
-
-                SizedBox(height: 20), // Espacio entre los contenedores
-
-                
               ],
             ),
           ),

@@ -65,7 +65,7 @@ class NotFound extends StatelessWidget {
                         ),
                         const SizedBox(height: 15),
                         const Text(
-                          "No disponibe por el momento",
+                          "No disponible por el momento",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.black,
@@ -75,6 +75,15 @@ class NotFound extends StatelessWidget {
                             letterSpacing: -0.41,
                           ),
                         ),
+                        SizedBox(height: 15),
+                        Container(
+                          width: 300,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.rectangle,
+                            border: Border.all(width: 0.50, color: const Color(0xFFC7C7C7)),
+                          ),
+                        ),
+                        
                       ],
                     ),
                   ),

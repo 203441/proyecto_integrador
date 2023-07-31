@@ -24,7 +24,7 @@ class Estrategias extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           icon: const Icon(
-              Icons.arrow_circle_left_outlined,
+              Icons.keyboard_arrow_left_sharp,
               size: 40,
             ),
           onPressed: () {

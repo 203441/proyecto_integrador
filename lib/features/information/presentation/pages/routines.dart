@@ -1,5 +1,6 @@
 import 'package:app_auth/features/information/presentation/pages/quiz_page.dart';
 import 'package:flutter/material.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'form.dart';
 import 'infoCauses.dart';
 
@@ -72,7 +73,7 @@ class Rutinas extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         const Text(
-                          'Video',
+                          'Video informativo sobre el tema',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.black,
@@ -83,7 +84,6 @@ class Rutinas extends StatelessWidget {
                             letterSpacing: -0.41,
                           ),
                         ),
-                        
                         const SizedBox(height: 15),
                         Container(
                           width: 300,
@@ -91,6 +91,16 @@ class Rutinas extends StatelessWidget {
                           decoration: BoxDecoration(
                             shape: BoxShape.rectangle,
                             border: Border.all(width: 0.50, color: Color(0xFFC7C7C7)),
+                          ),
+                          child: YoutubePlayer(
+                            controller: YoutubePlayerController(
+                              initialVideoId: 'QXobgpRXm_A', // Reemplaza 'VIDEO_ID_HERE' con el ID de tu video de YouTube
+                              flags: YoutubePlayerFlags(
+                                autoPlay: false, // Cambia a 'true' si deseas que el video se reproduzca automáticamente
+                                mute: false, // Cambia a 'true' si deseas que el video se reproduzca sin sonido
+                              ),
+                            ),
+                            showVideoProgressIndicator: true,
                           ),
                         ),
                         const SizedBox(height: 15),

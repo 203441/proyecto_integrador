@@ -56,11 +56,11 @@ dependencies:
   just_audio: ^0.9.34
   dio: ^5.3.0
   flutter_launcher_icons: ^0.13.1
+  youtube_player_flutter: ^8.1.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  youtube_player_flutter: ^8.1.2
   flutter_inappwebview: ^5.7.2+3
 
 flutter_launcher_icons:

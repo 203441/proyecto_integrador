@@ -1,6 +1,7 @@
 import 'package:app_auth/features/information/presentation/pages/acerca_de.dart';
 import 'package:app_auth/features/information/presentation/pages/aviso_privacidad.dart';
 import 'package:app_auth/features/information/presentation/pages/terminos_condiciones.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'components/button_close.dart';
 import '../../../user/presentation/homepage.dart';
@@ -17,7 +18,7 @@ class Users extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           icon: const Icon(
-            Icons.arrow_circle_left_outlined,
+            Icons.keyboard_arrow_left_sharp,
             size: 40,
           ),
           onPressed: () {
@@ -183,20 +184,56 @@ class Users extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 15),
-
-              MyButtonClose(
-              onTap: () {
-                Navigator.push(
-                  context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
-                  );
-                },
+              const SizedBox(height: 35),
+              Align(
+                alignment: Alignment.center,
+                child: Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center, // Centrar los elementos horizontalmente
+                    children: [
+                      TextButton(
+                        onPressed: () {
+                          // Llamar a la función para cerrar la sesión y redirigir a la vista de inicio de sesión
+                          _signOut(context);
+                        },
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.logout,
+                              size: 32,
+                              color: Color.fromARGB(255, 0, 0, 0),
+                            ),
+                            SizedBox(width: 8), // Ajustar el espaciado entre el icono y el texto
+                            Text(
+                              "Cerrar sesión",
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Color.fromARGB(255, 0, 0, 0),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
+
+             
             ],
           ),
         ),
       ),
     );
   }
+  // Función para cerrar la sesión del usuario y redirigir a la vista de inicio de sesión
+  void _signOut(BuildContext context) {
+    // Aquí llamar a la función de tu proveedor de autenticación o fuente de datos para cerrar sesión
+    // Por ejemplo, si estás utilizando Firebase Auth:
+    FirebaseAuth.instance.signOut();
+    
+    // Luego, redirigir al usuario a la vista de inicio de sesión y eliminar todas las rutas anteriores
+    Navigator.pushNamedAndRemoveUntil(context, '/login_screen', (route) => false);
+  }
+  
 }

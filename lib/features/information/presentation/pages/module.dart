@@ -17,19 +17,6 @@ class Modulos extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Color.fromRGBO(81, 78, 235, 50),
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(
-              Icons.keyboard_arrow_left_sharp,
-              size: 40,
-            ),
-          onPressed: () {
-            Navigator.pop(context); // Volver a la vista anterior
-          },
-        ),
-      ),
       body: SafeArea(
         child: Column(
           children: [
@@ -46,7 +33,7 @@ class Modulos extends StatelessWidget {
               ),
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 35),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 180),
             GestureDetector(
               onTap: () {
                 Navigator.push(

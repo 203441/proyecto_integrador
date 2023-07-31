@@ -30,7 +30,6 @@ class _InfoEvaluationState extends State<InfoEvaluation> {
     'pregunta15': 0,
     'pregunta16': 0,
     'pregunta17': 0,
-    // Agrega más preguntas aquí con sus puntajes iniciales
   };
 
   @override

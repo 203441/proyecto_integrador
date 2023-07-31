@@ -1,3 +1,5 @@
+import 'package:app_auth/features/information/presentation/pages/main.dart';
+import 'package:app_auth/features/information/presentation/pages/module.dart';
 import 'package:app_auth/features/information/presentation/pages/quiz_page.dart';
 import 'package:flutter/material.dart';
 import 'form.dart';
@@ -20,7 +22,10 @@ class InfoExplication extends StatelessWidget {
             size: 40,
           ),
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Modulos()),
+                );
           },
         ),
         actions: [
@@ -196,98 +201,6 @@ class InfoExplication extends StatelessWidget {
 
                 SizedBox(height: 20), // Espacio entre los contenedores
 
-                Container(
-                  width: 331,
-                  decoration: ShapeDecoration(
-                    color: const Color(0xFFF6F6F6),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.all(16.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                         Container(
-                          width: 331,
-                          decoration: ShapeDecoration(
-                            color: Color(0xFFF6F6F6),
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
-                          ),
-                          
-                        ), 
-                        const Text(
-                          'El Trastorno por Deficit de Atención e Hiperactividad',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.w600,
-                            height: 2,
-                            letterSpacing: -0.41,
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                              width: 40,
-                              height: 40,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage('lib/features/media/liz.png'),
-                                  fit: BoxFit.fill,
-                                ),
-                                shape: BoxShape.circle,
-                              ),
-                            ),
-                            const SizedBox(width: 10),
-                            const Text(
-                              'Lizeth Vidaña',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 12,
-                                fontFamily: 'Montserrat',
-                                fontWeight: FontWeight.w300,
-                                letterSpacing: -0.41,
-                              ),
-                            ),
-                            const Spacer(),
-                            const Text(
-                              'Jul 20, 2023',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 12,
-                                fontFamily: 'Montserrat',
-                                fontWeight: FontWeight.w300,
-                                letterSpacing: -0.41,
-                              ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 15),
-                        Container(
-                          width: 300,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.rectangle,
-                            border: Border.all(width: 0.50, color: Color(0xFFC7C7C7)),
-                          ),
-                        ),
-                        const SizedBox(height: 15),
-                        const Text(
-                          "El Trastorno por Deficit de Atención e Hiperactividad (TDAH) es una tipo enfermedad neurológica que afecta la capacidad de hacer distintas actividades, por ejemplo, el simple hecho de dormir, ya que esta enfermad tiene como un síntoma el insomnio.",
-                          textAlign: TextAlign.justify,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontFamily: 'Montserrat',
-                            fontWeight: FontWeight.w300,
-                            letterSpacing: -0.41,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
                 SizedBox(height: 15),
                 
               ],
