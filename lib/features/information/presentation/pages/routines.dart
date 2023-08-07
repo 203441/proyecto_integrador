@@ -38,7 +38,6 @@ class Rutinas extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 16,
-                    fontFamily: 'Montserrat',
                     fontWeight: FontWeight.w600,
                     letterSpacing: -0.41,
                   ),
@@ -73,7 +72,7 @@ class Rutinas extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         const Text(
-                          'Video informativo sobre el tema',
+                          'Video informativo sobre el tema    ',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.black,
@@ -94,10 +93,10 @@ class Rutinas extends StatelessWidget {
                           ),
                           child: YoutubePlayer(
                             controller: YoutubePlayerController(
-                              initialVideoId: 'QXobgpRXm_A', // Reemplaza 'VIDEO_ID_HERE' con el ID de tu video de YouTube
+                              initialVideoId: 'QXobgpRXm_A', 
                               flags: YoutubePlayerFlags(
-                                autoPlay: false, // Cambia a 'true' si deseas que el video se reproduzca automáticamente
-                                mute: false, // Cambia a 'true' si deseas que el video se reproduzca sin sonido
+                                autoPlay: false, 
+                                mute: false, 
                               ),
                             ),
                             showVideoProgressIndicator: true,
@@ -108,12 +107,7 @@ class Rutinas extends StatelessWidget {
                     ),
                   ),
                 ),
-
-                SizedBox(height: 20), // Espacio entre los contenedores
-
-                
-                SizedBox(height: 15),
-                
+                SizedBox(height: 20), 
               ],
             ),
           ),

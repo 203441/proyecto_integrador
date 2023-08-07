@@ -6,9 +6,9 @@ class FormInfoQuizz extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color.fromARGB(255, 242, 242, 242),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: const Color.fromARGB(255, 241, 241, 241),
         elevation: 0,
         leading: IconButton(
           color: Colors.black,
